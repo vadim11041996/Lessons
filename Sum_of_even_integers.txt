@@ -1,0 +1,10 @@
+const evenLast = (arrIn) => {
+    var res = 0;
+    if(arrIn.length == 0){
+        return 0;
+    }
+    for(let i = 0; i < arrIn.length;i+=2){
+        res = res +arrIn[i];
+    }
+    return res * arrIn[arrIn.length-1];
+};
