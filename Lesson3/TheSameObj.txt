@@ -1,0 +1,15 @@
+function checkObjects(first, second) {
+   
+let sum = 0;
+  
+  
+for(k in first) {
+    
+if(second.hasOwnProperty(k)){
+      sum += first[k] + second[k];
+    }
+    
+else { return sum = false; }
+  }
+  return sum;
+}

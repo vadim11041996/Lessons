@@ -1,0 +1,6 @@
+var person = {
+  first_name:'Vadim',
+  last_name:'Vadim',
+  age:21,
+  interests:'a'
+};

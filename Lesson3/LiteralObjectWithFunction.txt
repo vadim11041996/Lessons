@@ -1,0 +1,7 @@
+function getLiteralObjectWithFunction() {
+  let container = {}
+  container.getSquare = function(x) {
+    return x*x;
+  }
+  return container;
+}

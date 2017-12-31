@@ -1,0 +1,27 @@
+function flattenAndSort(array) {
+    var c = [];
+
+    for (var i = 0; i < array.length; i++) {
+        for (var j = 0; j < array[i].length; j++) {
+            c.push(array[i][j]);
+        }
+    }
+var v = c;
+
+    var swapp;
+    var n = v.length - 1;
+    var x = v;
+    do {
+        swapp = false;
+        for (var i = 0; i < n; i++) {
+            if (x[i] > x[i + 1]) {
+                var temp = x[i];
+                x[i] = x[i + 1];
+                x[i + 1] = temp;
+                swapp = true;
+            }
+        }
+        n--;
+    } while (swapp);
+    return v;
+}

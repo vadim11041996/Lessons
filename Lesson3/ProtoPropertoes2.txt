@@ -1,0 +1,2 @@
+// metoda care returneaza un array cu proprietatile individuale ale obiectului (aplici filter si verifici daca le are si prototipul)
+const similarProperties = objIn => Object.getOwnPropertyNames(objIn).filter(prop => objIn.__proto__.hasOwnProperty(prop));

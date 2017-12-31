@@ -1,0 +1,11 @@
+const func = arr =>{
+    var n = 0;
+    var sum = 0;
+    var i =0;
+    while(sum<11){
+        sum = sum + arr[i];
+        n++;
+        i++;
+    }
+         return n;
+};

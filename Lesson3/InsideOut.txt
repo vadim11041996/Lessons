@@ -1,0 +1,7 @@
+const insideOut = (inObject) => {
+  let res = {};
+  for(const prop in inObject) {
+    res[typeof inObject[prop]] = prop;
+  }
+  return res;
+}

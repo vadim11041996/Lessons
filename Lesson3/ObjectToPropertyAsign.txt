@@ -1,0 +1,5 @@
+function getLiteralObjectWithCircles(data) {
+  let container = {};
+    container.circles = data;
+     return container;
+}

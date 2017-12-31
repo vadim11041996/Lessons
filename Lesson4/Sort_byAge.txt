@@ -1,0 +1,3 @@
+function solution(obj) {
+    return Object.keys(obj).sort((a, b) => obj[a] - obj[b]).join(', ');
+}

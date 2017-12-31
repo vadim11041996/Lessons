@@ -1,0 +1,8 @@
+function splitArray(arr, size){
+   var c = [];
+   for(let i = size;i <arr.length;i++){
+           c.push(arr[i]);
+   }
+   return c;
+
+}

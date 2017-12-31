@@ -1,0 +1,10 @@
+const executableFunctionsArguments = function () {
+  let args = Array.from(arguments);
+  let c = [];
+  args.forEach(val => {
+    if(typeof (val) === "function")
+      c.push(val());
+  });
+  return c;
+
+}

@@ -1,0 +1,15 @@
+const getMostPaidEmployee = function (salaries) {
+var c;
+var max = -Infinity;
+    if(Object.keys(salaries).length === 0)
+        return '';
+
+    for(var key in salaries){
+        if(salaries[key]>max){
+            max = salaries[key];
+            c = key;
+        }
+    }
+    return c;
+
+};

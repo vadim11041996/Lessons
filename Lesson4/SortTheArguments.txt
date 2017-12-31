@@ -1,0 +1,53 @@
+function sortArgs(){
+   var c = [];
+    if(sortArgs.arguments[sortArgs.arguments.length-1]=='asc'){
+      for(var i = 0;i < sortArgs.arguments.length-1;i++){
+          c.push(sortArgs.arguments[i]);
+      }
+
+        var v = c;
+        var swapp;
+        var n = v.length - 1;
+        var x = v;
+        do {
+            swapp = false;
+            for (var i = 0; i < n; i++) {
+                if (x[i] > x[i + 1]) {
+                    var temp = x[i];
+                    x[i] = x[i + 1];
+                    x[i + 1] = temp;
+                    swapp = true;
+                }
+            }
+            n--;
+        } while (swapp);
+        return v;
+   }
+
+    if(sortArgs.arguments[sortArgs.arguments.length-1]=='desc'){
+        for(var i = 0;i < sortArgs.arguments.length-1;i++){
+            c.push(sortArgs.arguments[i]);
+        }
+
+        var v = c;
+        var swapp;
+        var n = v.length - 1;
+        var x = v;
+        do {
+            swapp = false;
+            for (var i = 0; i < n; i++) {
+                if (x[i] < x[i + 1]) {
+                    var temp = x[i];
+                    x[i] = x[i + 1];
+                    x[i + 1] = temp;
+                    swapp = true;
+                }
+            }
+            n--;
+        } while (swapp);
+        return v;
+
+
+    }
+
+}

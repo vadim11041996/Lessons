@@ -1,0 +1,9 @@
+function getLiteralObjectWithConstant(container) {
+  Object.defineProperty(container, "PI", {
+  value:3.14,
+  writable: false,
+  enumerable: true,
+  configurable: false
+});
+   return container;
+}

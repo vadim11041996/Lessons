@@ -1,0 +1,15 @@
+function mergeArrays(a, b) {
+    var res = [];
+    var c = 0;
+    while (a[c] || b[c] ){
+        if(a[c]){
+            res.push(a[c]);
+        }
+        if(b[c]){
+            res.push(b[c]);
+        }
+        c++;
+
+    }
+    return res;
+}

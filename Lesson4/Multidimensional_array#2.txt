@@ -1,0 +1,11 @@
+const threeDimensionalArr = arr =>{
+    var sum = 0;
+    for(let i = 0; i < arr.length;i++){
+        for(let j = 0;j < arr[i].length;j++){
+            for(let m = 0;m < arr[i][j].length;m++) {
+                sum = sum + arr[i][j][m];
+            }
+        }
+    }
+    return sum;
+};

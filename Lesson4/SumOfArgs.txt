@@ -1,0 +1,9 @@
+const sumOf = function() {
+  let args = Array.from(arguments);
+  let sum = 0;
+  args.forEach(val => {
+    if(typeof (val) === 'number' || (typeof (val) === 'string' && !isNaN(val)))
+      sum += Number(val);
+  });
+  return sum;
+}

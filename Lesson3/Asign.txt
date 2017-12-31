@@ -1,0 +1,18 @@
+var source = {
+  items: [
+    {A: 100},
+    {B: 120},
+    {C: 140}
+  ],
+  divideEqually: 35
+};
+
+var destination = {};
+
+function putToDestination(source) {
+  source.items.forEach(item => {
+    if(!destination.hasOwnProperty(Object.keys(item)[0]))
+      destination[Object.keys(item)[0]] = item[Object.keys(item)[0]];
+  });
+}
+

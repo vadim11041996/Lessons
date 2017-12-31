@@ -1,0 +1,11 @@
+const evenObjectKeys = function (objIn) {
+    var c = [];
+    var b = 0;
+    for(let key in objIn){
+        if(b%2==0)
+        c.push(key);
+        b++;
+    }
+    return c;
+
+};

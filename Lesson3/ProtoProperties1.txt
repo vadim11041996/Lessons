@@ -1,0 +1,7 @@
+const itSelfProperties = function (objIn) {
+  let res = [];
+  for(const prop in objIn.__proto__) {
+    res.push(prop)
+  }
+  return res;
+}

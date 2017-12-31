@@ -1,0 +1,16 @@
+function cloneTheObject() {
+    var galaxy  = {};
+    galaxy.planets = {
+        1:'earth',
+        2:'mars',
+        3:'venus'
+    };
+    galaxy.stars = {
+        4:'procyon',
+        5:'sirius',
+        6:'sun'
+    };
+    var clonedGalaxy = {};
+    clonedGalaxy.planets = Object.assign({}, galaxy.planets);
+     return clonedGalaxy;
+}

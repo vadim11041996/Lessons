@@ -1,0 +1,3 @@
+function duplicateArgs(...someArr) {
+    return new Set(arguments).size != arguments.length;
+}

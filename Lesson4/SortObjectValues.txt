@@ -1,0 +1,14 @@
+function sortObject(obj) {
+  let sortedObj = {};
+  let valuesArr = [];
+  for(const prop in obj) {
+    valuesArr.push(obj[prop]);
+  }
+  valuesArr.sort();
+  let i = 0;
+  for(const prop in obj) {
+    sortedObj[prop] = valuesArr[i];
+    i++;
+  }
+  return sortedObj;
+}

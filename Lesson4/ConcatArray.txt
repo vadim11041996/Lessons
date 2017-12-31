@@ -1,0 +1,10 @@
+function combineArrays(arr1, arr2) {
+    var c = [];
+  for(let i = 0; i < arr1.length;i++){
+  c.push(arr1[i]);
+  }
+  for(let i = 0; i < arr2.length;i++){
+  c.push(arr2[i]);
+  }
+  return c;
+}
