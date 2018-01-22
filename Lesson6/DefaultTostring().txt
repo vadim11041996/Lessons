@@ -1,0 +1,12 @@
+// we overwriting default method toString() so that it will return string
+function Dev(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
+
+Dev.prototype.toString = function devToString() {
+    return `Developer: ${this.name}, gender: ${this.gender}, age: ${this.age}`
+};
+
+theDev = new Dev('Slevin', 27, 'male');

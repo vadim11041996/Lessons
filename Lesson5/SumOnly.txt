@@ -1,0 +1,6 @@
+function sum(a){
+  function add(b){
+    return a+b;
+  }
+  return add;
+}

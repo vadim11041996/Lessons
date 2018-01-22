@@ -1,0 +1,8 @@
+function sum(a, b){
+  const sum2 = b => a + b;
+  if(arguments.length == 1) {
+      return sum2;
+  } else {
+      return sum2(b);
+  }
+}

@@ -1,0 +1,6 @@
+function multiplyAll(a) {
+    return function(n){
+    var newA = a.map(f => f * n);
+      return newA;
+    }
+}

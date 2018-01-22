@@ -1,0 +1,6 @@
+console.reverse = function (string) {
+        return string.split('').reverse().join('');
+    };
+    console.upperCase = function (string) {
+        return string.toUpperCase();
+    };

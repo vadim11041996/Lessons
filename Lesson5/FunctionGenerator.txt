@@ -1,0 +1,14 @@
+function functionGenerator() {
+    var c = [];
+    for (let i = 0; i < 10; i++) {
+        var g = (function(x) {
+            return function() {
+                return x;
+            };
+        })(i);
+        c.push(g);
+    }
+    return c;
+}
+
+var functions = functionGenerator();

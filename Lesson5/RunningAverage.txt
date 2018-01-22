@@ -1,0 +1,9 @@
+function runningAverage() {
+    var sum = 0;
+  var i = 0;
+     return function (b) {
+       i++;
+       sum += b;
+       return sum/i;
+    }
+}

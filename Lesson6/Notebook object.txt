@@ -1,0 +1,19 @@
+var notebook = {
+    collection: [], // our store
+
+    addPerson: function addPerson (person) {
+        this.collection.push(person); // push new person to store
+        return this; // return this to make chainable syntax available
+    },
+
+    removePerson: function removePerson (personName) {
+        this.collection = this.collection.filter(function removePersonCb (person) {
+            return person.name !== personName; // remove all matches
+        });
+        return this; // return this to make chainable syntax available
+    },
+
+    getPersons: function getPersons () {
+        return this.collection; // return collection elements
+    }
+};

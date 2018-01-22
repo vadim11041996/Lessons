@@ -1,0 +1,11 @@
+function sum(a) {
+  var currentSum = a;
+  function f(b) {
+    currentSum += b;
+    return f;
+  }
+  f.valueOf = function() {
+    return currentSum;
+  };
+  return f;
+}

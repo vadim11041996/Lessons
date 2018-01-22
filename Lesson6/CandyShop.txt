@@ -1,0 +1,18 @@
+function Candy(candyName, price) {
+
+    this.candyName = candyName;
+    this.price = price;
+    this.wasBought = 0;
+
+    Object.defineProperty(this, "candyName", {
+        get: function () {
+            this.wasBought++;
+        }
+    });
+
+    Object.defineProperty(this, "total", {
+        get: function () {
+            return this.wasBought * this.price;
+        }
+    });
+}

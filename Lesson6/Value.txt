@@ -1,0 +1,9 @@
+let elem = {
+    value: 'Hi there'
+};
+
+function func() {
+    alert(this.value);
+}
+
+func.call(elem);

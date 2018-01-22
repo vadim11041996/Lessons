@@ -1,0 +1,24 @@
+const DarthVader = {
+    _name: 'Anakin Skywalker',
+    _jedisKilled: 0
+};
+
+Object.defineProperty(DarthVader, 'name', {
+    enumerable: false,
+    configurable: false,
+    get: function () {
+        this._jedisKilled++;
+        return `${this._name}`;
+    },
+    set: function () {
+        this._jedisKilled > 0 ? this._jedisKilled-- : null;
+    }
+});
+
+Object.defineProperty(DarthVader, 'jedisKilled', {
+    enumerable: false,
+    configurable: false,
+    get: function () {
+        return `${this._jedisKilled}`;
+    },
+});

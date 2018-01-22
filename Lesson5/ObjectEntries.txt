@@ -1,0 +1,11 @@
+Object.toPairs = function(b) {
+       var result = [];
+    for (var i in b ) {
+        var res = [];
+        res.push(i, b[i]);
+        result.push(res);
+    }
+    return result;
+};
+
+

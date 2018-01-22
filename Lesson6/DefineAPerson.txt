@@ -1,0 +1,14 @@
+var person = {
+    firstName: 'Jane',
+    lastName: 'Doe',
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+    set fullName(name) {
+        this.firstName = name.split(' ')[0];
+        this.lastName = name.split(' ')[1];
+        //or another way
+        let [firstName, lastName] = name.split(' ');
+        Object.assign(this, { firstName, lastName });
+    }
+};

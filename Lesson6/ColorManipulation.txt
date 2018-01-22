@@ -1,0 +1,18 @@
+// the function colorManipulation just return us the hex color format.
+const colorManipulation = (r,g,b) => {return "#" + toHex(r)+ toHex(g)+ toHex(b)};
+
+const toHex = n  => {
+    if (n > 255) return (255).toString(16);
+    let result = n.toString(16);
+    return result.length === 1 ? "0" + result : result;
+};
+
+// or
+
+function colorManipulation(r,g,b) {
+    r.toString(16).length < 2 ? r = '0' + r.toString(16) : r = r.toString(16);
+    g.toString(16).length < 2 ? g = '0' + g.toString(16) : g = g.toString(16);
+    b.toString(16).length < 2 ? b = '0' + b.toString(16) : b = b.toString(16);
+
+    return '#' + r + g + b;
+}

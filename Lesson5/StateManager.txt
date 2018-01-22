@@ -1,0 +1,11 @@
+function createStore(){
+  var obj = {};
+  return {
+    setItem: function(propName, value) {
+      obj[propName] = value;
+    },
+    getItem: function(propName) {
+      return obj[propName];
+    }    
+  };
+}

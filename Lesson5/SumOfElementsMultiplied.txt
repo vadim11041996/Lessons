@@ -1,0 +1,5 @@
+function summarizeAndMultiply (n) {
+    return function (x) {
+        return n.reduce((res, val) => res += val, 0) * x;
+    }
+}

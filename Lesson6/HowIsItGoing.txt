@@ -1,0 +1,10 @@
+let elem = {
+    value: 'How is it going'
+};
+
+function func(surname, name) {
+    alert(this.value + ' ' + surname + ' ' + name + '?');
+}
+
+func.call(elem, 'John', 'Doe');
+func.bind(elem, 'John', 'Doe')();

@@ -1,0 +1,21 @@
+var calculator = {
+    read: function readData () {
+    this.args = Array.prototype.slice.call(arguments); // save args as an array
+ },
+
+        sum: function sum () {
+        return this.args.reduce(function (sum, element) {
+            return sum + element; // count args sum
+             });
+        },
+
+            mul: function mul () {
+        return this.args.reduce(function (product, element) {
+               return product * element; // count args product
+ });
+    }
+};
+
+console.log(calculator.read(1,2,3,4));
+console.log(calculator.sum());
+console.log(calculator.mul());

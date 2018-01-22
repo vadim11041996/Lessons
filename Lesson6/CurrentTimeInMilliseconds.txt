@@ -1,0 +1,4 @@
+function getTime() {
+	let time = new Date();
+	return time.valueOf();
+}

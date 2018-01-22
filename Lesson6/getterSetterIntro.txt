@@ -1,0 +1,10 @@
+let obj = {
+    width: 100,
+    get a() {
+        return this.width - 1;
+    },
+
+    set b(x) {
+        this.width = x * 2;
+    }
+};
