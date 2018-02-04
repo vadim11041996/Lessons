@@ -1,0 +1,52 @@
+function loadScript(src, callback) {
+    let script = document.createElement('script');
+    script.src = src;
+
+    script.onload = () => callback(null, script);
+    script.onerror = () => callback(new Error(`Script load error for ${src}`));
+
+    document.head.append(script);
+}
+
+// We load firstScript, then if there’s no error.
+loadScript('firstScript', function(error, script) {
+
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(script);
+        // We load secondScript, then if there’s no error.
+        loadScript('secondScript', function(error, script) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log(script);
+                // ...
+            }
+        })
+        // ...
+    }
+});
+
+// Better way to alleviate the problem by making every action a standalone function:
+
+loadScript('firstScript', step1);
+
+function step1(error, script) {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(script);
+        loadScript('secondScript', step2);
+        // ...
+    }
+}
+
+function step2(error, script) {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(script);
+        // ...
+    }
+}

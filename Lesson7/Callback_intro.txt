@@ -1,0 +1,17 @@
+// The purpose of the function is to load a new script.
+// When it adds the <script src="…"> to the document, the browser loads and executes it.
+function loadScript(src, callback) {
+    let script = document.createElement('script');
+    script.src = src;
+    script.onload = function () {
+        callback(script);
+    };
+    document.head.append(script);
+}
+
+loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', function(script) {
+    // the callback runs after the script is loaded
+    alert(`Cool, the ${script.src} is loaded`); // ES6 usage
+    alert('Cool, the ' + script.src + ' is loaded'); // concatenation
+    alert( _ ); // function declared in the loaded script
+});

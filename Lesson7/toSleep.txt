@@ -1,0 +1,7 @@
+function sleep (ms) {
+    return new Promise(function (resolve) { // return promise that will be resolved in ms
+        setTimeout(resolve, ms);
+    });
+};
+sleep(1000)
+    .then(() => console.log('Logs after 1 sec'));

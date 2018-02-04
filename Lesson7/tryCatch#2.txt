@@ -1,0 +1,9 @@
+let jsonDataFormat = '{awry json}';
+
+try {
+    let parsedData = JSON.parse(jsonDataFormat); // when error occurs...
+    alert(parsedData.name); // doesn't work
+} catch (err) {
+    // ...the execution jumps here
+    alert('JSON Error: ' + err.message);
+}

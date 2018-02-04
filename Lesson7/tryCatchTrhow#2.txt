@@ -1,0 +1,19 @@
+function readData() {
+
+    try {
+        something();
+    } catch (e) {
+        // ...
+        if (e.name !== 'SyntaxError') {
+            throw e; // rethrow (don't know how to deal with it)
+        }
+    }
+}
+
+try {
+    readData();
+} catch (e) {
+    alert( "External catch got: " + e ); // caught it!
+}
+
+// Here readData only knows how to handle SyntaxError, while the outer try..catch knows how to handle everything.

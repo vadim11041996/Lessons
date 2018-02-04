@@ -1,0 +1,15 @@
+const promiseChainFunction  = (numberOfLetters) => {
+    
+    let promiseChain = Array(numberOfLetters).fill(
+        (index) => {
+            return new Promise((r,re) => {
+                r(
+                    String.fromCharCode(65 + index)
+                );
+            })
+        }
+    )
+
+    return promiseChain.map((item,index) => item(index));
+
+}

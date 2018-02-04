@@ -1,0 +1,10 @@
+let jsonDataFormat = '{"name": "John", "age": 30, "username": "john_AKA_marmelad"}';
+
+try {
+    let parsedData = JSON.parse(jsonDataFormat); // no error
+    alert(` name: ${parsedData.name}, username: ${parsedData.username}, age: ${parsedData.age}`);
+} catch (err) {
+    // catch will be ignored
+    alert("Our apologies, the data has errors");
+    alert(err.stack);
+}

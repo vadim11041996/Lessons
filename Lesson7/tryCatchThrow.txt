@@ -1,0 +1,11 @@
+let jsonDataFormat = '{"name": "John"}'; // incomplete data
+
+try {
+    let parsedData = JSON.parse(jsonDataFormat);
+    if (!parsedData.age)
+        throw new SyntaxError('Incomplete data: no age'); // throw operator generates SyntaxError with the given message
+    alert(parsedData.age);
+} catch (err) {
+    // catch will be executed
+    alert('JSON Error: ' + err.message);
+}

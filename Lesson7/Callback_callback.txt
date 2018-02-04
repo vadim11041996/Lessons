@@ -1,0 +1,16 @@
+function loadScript(src, callback) {
+    let script = document.createElement('script');
+    script.src = src;
+    script.onload = () => callback(script);
+    document.head.append(script);
+}
+
+loadScript('script1', function(script) {
+
+    alert(`Cool, the ${script.src} is loaded, let's load one more`);
+    // after the outer loadScript is complete, the callback initiates the inner one.
+    loadScript('script2', function(script2) {
+        // ...continue after all scripts are loaded
+        alert(`Cool, the ${script2.src} is loaded`);
+    });
+});
